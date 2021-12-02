@@ -1,4 +1,6 @@
-export class ClientesModelo{
+
+
+export class ClienteModelo{
 
 id?: string;
 cedula?: number;

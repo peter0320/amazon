@@ -1,5 +1,6 @@
 export class ServicioModelo{
   
+  id?:string;
   origen?: string;
   destino?: string;
   fecha?: string;

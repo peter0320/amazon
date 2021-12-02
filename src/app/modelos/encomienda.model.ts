@@ -1,6 +1,10 @@
 export class EncomiendaModelo{
-    descripcion?: string;
-    peso?:string;
-    tipo?: string;
-    presentacion?: string;
+    
+  id?:string;
+  descripcion?: string;
+  peso?:string;
+  tipo?: string;
+  presentacion?: string;
+
+
   }

@@ -7,13 +7,21 @@
         <div class="row card-panel">
   
             <div class="input-field col s6">                
-                    <input id="origen" type="text" class="validate">
-                    <label for="origen">origen</label>                   
+                <select>
+                    <option value="" browser-default>Choose your option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>                  
                   </div>    
                   
                   <div class="input-field col s6">
-                    <label for="destino">destino</label>   
-                    <input type="text"  id="destino" class="validate">
+                    <select>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                      </select>
                 </div>
       
                 
@@ -30,8 +38,12 @@
             </div>
 
             <div class="input-field col s6">
-                <label for="encomienda">encomienda</label> 
-                <input type="text"  id="encomienda" class="validate">
+                <select>
+                    <option value="" >Choose your option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
             </div>
 
             <div class="input-field col s6">
@@ -64,3 +76,17 @@
   
   </div>
 
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems);
+      });
+    
+      // Or with jQuery
+    
+      $(document).ready(function(){
+        $('select').formSelect();
+      });
+    
+    </script>
