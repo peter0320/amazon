@@ -1,0 +1,31 @@
+<div class="navbar-fixed">
+
+<nav>
+    <div class="nav-wrapper   indigo darken-4">
+      <a href="#" class="brand-logo">Logo</a>
+      
+      <ul id="nav-mobile dropdown1" class="right hide-on-med-and-down">
+        <li><a routerLink="/admin/get">Administrador</a></li>
+        <li><a routerLink="/clientes/get">Clientes</a>
+        
+        
+        
+
+        <li><a routerLink="/servicios/get">Servicios</a></li>
+        <li><a routerLink="/encomiendas/get">Encomiendas</a></li>
+        <!-- Sesion -->
+      <li *ngIf="!activeSession"><a routerLink="/seguridad/login">Login</a></li>
+      <li *ngIf="activeSession"><a routerLink="/seguridad/logout">Cerrar Sesion</a></li>
+       
+       
+      </ul>
+
+     
+
+
+    </div>
+  </nav>
+
+
+
+</div>
