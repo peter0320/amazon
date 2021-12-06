@@ -1,57 +1,43 @@
-<div class="section container">
-
-  
+<div class="section container">   
  
   <div class="row">
-     <form class="col s12">
-      <h5 text-align="center">Registro de Usuario</h5>
+     <form [formGroup]="fgValidacion" class="col s12" (ngSubmit)="store()">
 
-      <div class="row card-panel">
+      <h5 class="center-align">Registro de Usuario</h5>
 
-          <div class="input-field col s6">                
-                  <input id="nombre_usuario" type="text" class="validate">
+      <div class="row card-panel ">
+
+          <div class="input-field  col s6"> 
+               
+                  <input formControlName="nombre" type="text" class="validate">
                   <label for="nombre_usuario">Nombre usuario</label>                   
                 </div>    
                 
                 <div class="input-field col s6">
                   <label for="nombre">Ingresar apellidos</label>   
-                  <input type="text"  id="apellidos" class="validate">
+                  <input type="text"  formControlName="apellidos" class="validate">
               </div>
-    
-              
+
+
+               
                 <div class="input-field col s6">
-                  <label for="nombre">Ingresar email</label> 
-                  <input type="text"  id="email" class="validate">
-              </div>
-          
-         
-          
-          <div class="input-field col s6">
-              <label for="nombre">Ingresar pais</label> 
-              <input type="text"  id="pais" class="validate">
-          </div>
+                    <label for="telefono">Telefono</label> 
+                    <input type="text" formControlName="telefono"  class="validate">
+                </div>
 
-          <div class="input-field col s6">
-            <label for="nombre">Password</label> 
-            <input type="text"  id="pais" class="validate">
-        </div>
-        
-         
-
-        <div class="input-field col s12">
-              
-          <button class="btn"  type="submit" id="">Registrar</button>
-          <button class="btn"  type="submit" id="">Cancelar</button>
+                <div class="input-field col s6">
+        <input formControlName="correo" type="email" class="validate">
+        <label for="correo">Correo</label>
+        <span class="helper-text" data-error="Correo invalido" data-success="right">Estado</span>
       </div>
 
-
+      <div class="row center-align">
+        <button [disabled]="!fgValidacion.valid" class="btn waves-effect waves-light" type="submit" name="action">Enviar
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
          
       </div>
-
-     
-    
-
-
 
      </form>
 

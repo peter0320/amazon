@@ -9,7 +9,7 @@ const routes: Routes = [
   path: 'create',
   component: CreateComponent,
 },{
-  path: "Edit",
+  path: "edit/:id",
   component: EditComponent,
 },{
   path: 'get',

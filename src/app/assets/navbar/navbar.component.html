@@ -2,20 +2,17 @@
 <div class="navbar-fixed">
 
 <nav>
-    <div class="nav-wrapper   indigo darken-4">
-      
-      <img src="assets/images/logo2.png" class="img-responsive"  width="200" alt="image">
-
-      
+    <div class="nav-wrapper   indigo darken-4">      
+      <img src="assets/images/logo2.png" class="img-responsive"  width="200" alt="image">      
       <ul id="nav-mobile dropdown1" class="right hide-on-med-and-down">
-        <li *ngIf="activeSession"><a routerLink="/admin/get">Administrador</a></li>
-        <li *ngIf="activeSession"><a routerLink="/clientes/get">Clientes</a> 
+        <li *ngIf="activeSession"><a routerLink="/admin/get">Usuarios</a></li>
         
         
-
+        
+        <li *ngIf="activeSession"><a routerLink="/clientes/get">Clientes</a>
         <li *ngIf="activeSession"><a routerLink="/servicios/get">Servicios</a></li>
         <li *ngIf="activeSession"><a routerLink="/encomiendas/get">Encomiendas</a></li>
-
+        
         <!-- Sesion -->
       <li *ngIf="!activeSession"><a routerLink="/seguridad/login">Login</a></li>
       <li *ngIf="!activeSession"><a routerLink="/admin/create">Registrarse</a></li>
@@ -26,4 +23,9 @@
     </div>
   </nav>
 
+ 
+
 </div>
+
+
+

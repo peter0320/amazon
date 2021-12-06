@@ -1,62 +1,64 @@
 <div class="section container">
 
-    <h4 text-align="center">Registro de Clientes</h4>
+    <h4 class="center-align">Registro de Clientes</h4>
    <div class="row">
-       <form class="col s12">
+       <form  [formGroup]="fgValidacion"  class="col s12" (ngSubmit)="store()">
 
         <div class="row card-panel">
 
             <div class="input-field col s6">                
-                    <input id="cedula" type="text" class="validate">
+                    <input formControlName="cedula" type="number" class="validate">
                     <label for="cedula">Cedula</label>                   
                   </div>             
       
                 
             <div class="input-field col s6">
                 <label for="nombre">Ingresar Nombres</label>             
-                <input type="text"  id="nombre" class="validate">
+                <input type="text"  formControlName="nombre" class="validate">
             </div>
             
             <div class="input-field col s6">
-                <label for="nombre">Ingresar apellidos</label>   
-                <input type="text"  id="apellidos" class="validate">
+                <label for="apellidos">Ingresar apellidos</label>   
+                <input type="text"  formControlName="apellidos" class="validate">
             </div>
             
             <div class="input-field col s6">
-                <label for="nombre">Ingresar pais</label> 
-                <input type="text"  id="pais" class="validate">
+                <label for="pais">Ingresar pais</label> 
+                <input type="text"  formControlName="pais" class="validate">
             </div>
             
             <div class="input-field col s6">
-                <label for="nombre">Ingresar ciudad</label> 
-                <input type="text"  id="ciudad" class="validate">
+                <label for="ciudad">Ingresar ciudad</label> 
+                <input type="text"  formControlName="ciudad" class="validate">
             </div>
 
             <div class="input-field col s6">
-                <label for="nombre">Ingresar departamento</label> 
-                <input type="text" id="departamento" class="validate">
+                <label for="departamento">Ingresar departamento</label> 
+                <input type="text" formControlName="departamento" class="validate">
             </div>
 
             <div class="input-field col s6">
-                <label for="nombre">Ingresar direccion</label> 
-                <input type="text" id="direccion" class="validate">
+                <label for="direccion">Ingresar direccion</label> 
+                <input type="text" formControlName="direccion" class="validate">
             </div>
 
             <div class="input-field col s6">
-                <label for="nombre">Ingresar telefono</label> 
-                <input type="text"  id="telefono" class="validate">
+                <label for="telefono">Ingresar telefono</label> 
+                <input type="text"  formControlName="telefono" class="validate">
             </div>
 
             <div class="input-field col s6">
-                <label for="nombre">Ingresar email</label> 
-                <input type="text"  id="email" class="validate">
+                <label for="email">Ingresar email</label> 
+                <input type="text"  formControlName="email" class="validate">
             </div>
 
 
-            <div class="input-field col s12">
-                
-                <button class="btn"  type="submit" id="">Registrar</button>
-                <button class="btn"  type="submit" id="">Cancelar</button>
+            <div class="input-field col s12">               
+           
+                    <button [disabled]="!fgValidacion.valid" class="btn waves-effect waves-light" type="submit" name="action">Enviar
+                      <i class="material-icons right">send</i>
+                    </button>
+               
             </div>
 
            
