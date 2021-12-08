@@ -3,8 +3,9 @@ import { ClienteModelo } from 'src/app/modelos/cliente.model';
 import { ClienteService } from 'src/app/servicios/cliente.service';
 import { ServicioService } from 'src/app/servicios/servicio.service';
 import { ServicioModelo } from 'src/app/modelos/servicio.model';
+import { EncomiendaModelo } from 'src/app/modelos/encomienda.model';
+import { EncomiendaService } from 'src/app/servicios/encomienda.service';
 import { FormBuilder, Validators } from '@angular/forms';
-
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
@@ -16,12 +17,12 @@ import Swal from 'sweetalert2';
 })
 export class CreateComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private clienteService: ClienteService,
-    private router: Router,
-    private servicioService: ServicioService) { }
+  constructor(private fb: FormBuilder, private clienteService: ClienteService,private encomiendaService: EncomiendaService, 
+    private servicioService: ServicioService, private router: Router, 
+    ) { }
 
-  listadoClientes: ClienteModelo[] = []
-  listadoEncomienda: ClienteModelo[] = []
+    listadoClientes: ClienteModelo[] = []
+    listadoEncomienda: EncomiendaModelo[] = []
 
 
   fgValidacion = this.fb.group({
@@ -52,10 +53,31 @@ export class CreateComponent implements OnInit {
       alert("Error en el envio");
     })
   }
+ 
+
 
 
   ngOnInit(): void {
+    this.getAllClientes()
+    this.getAllEncomienda()
   }
+
+  
+  getAllClientes(){
+    this.clienteService.getAll().subscribe((data: ClienteModelo[]) => {
+      this.listadoClientes = data
+      console.log(data)
+      
+    })
+  }
+
+  getAllEncomienda(){
+    this.encomiendaService.getAll().subscribe((data: EncomiendaModelo[]) => {
+      this.listadoClientes = data
+      console.log(data)
+    })
+  }
+
 
 
   
