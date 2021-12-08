@@ -1,1 +1,64 @@
-<p>edit works!</p>
+<div class="section container">
+
+    <h5 class="center-align">Registro Servicios</h5>
+   <div class="row">
+    <form class="col s12" [formGroup]="fgValidacion"  (ngSubmit)="edit()" >
+  
+        <div class="row card-panel">
+  
+           
+          <div class="input-field col s6">
+            <select class="browser-default" formControlName="origen">
+              <option value="" disabled selected>Seleccione Cliente Origen</option>
+              <option *ngFor="let clienteorigen of listadoClientes" value="{{clienteorigen.cedula}}-{{clienteorigen.nombre}}-{{clienteorigen.apellidos}}-{{clienteorigen.ciudad}}">{{clienteorigen.cedula}}-{{clienteorigen.nombre}}-{{clienteorigen.apellidos}}-{{clienteorigen.ciudad}}</option>
+            
+            </select>  
+          </div>
+                  
+          <div class="input-field col s6">
+            <select class="browser-default" formControlName="destino" >
+              <option value="" disabled selected>Seleccione clienteorigen destino</option>
+              <option *ngFor="let clientedestino of listadoClientes" value="{{clientedestino.cedula}} - {{clientedestino.nombre}} -{{clientedestino.apellidos}}- {{clientedestino.ciudad}}">{{clientedestino.cedula}} {{clientedestino.nombre}} {{clientedestino.apellidos}} {{clientedestino.ciudad}}</option>
+            </select>
+          </div>
+      
+
+                  <div class="input-field col s6">
+                    <label for="fecha" class="active"></label> 
+                    <input type="date"  formControlName="fecha" class="validate">
+                </div>
+            
+           
+            
+            <div class="input-field col s6">
+                <label for="hora"></label> 
+                <input type="time" formControlName="hora" class="validate">
+            </div>
+
+            <div class="input-field col s6">  
+               
+                <select class="browser-default" formControlName="encomienda">
+                  <option value="" disabled selected>Encomienda registrada</option>
+                  <option *ngFor="let c of listadoEncomienda" value="{{c.descripcion}}">{{c.descripcion}}</option>
+                </select>  
+            </div>
+          
+
+            <div class="input-field col s6">
+                <label for="valor" class="active">valor</label> 
+                <input type="number"  formControlName="valor" class="validate">
+            </div>
+  
+          <div class="input-field col s12">                
+            <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+              <i class="material-icons right">send</i></button>
+        </div>
+           
+        </div>
+       </form>
+  
+   </div>
+  
+  </div>
+
+  

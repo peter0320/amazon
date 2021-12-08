@@ -10,16 +10,15 @@
           <div class="input-field col s6">
             <select class="browser-default" formControlName="origen">
               <option value="" disabled selected>Seleccione Cliente Origen</option>
-              <option *ngFor="let clienteorigen of listadoClientes" value="{{clienteorigen.nombre}}">{{clienteorigen.nombre}}--</option>
+              <option *ngFor="let clienteorigen of listadoClientes" value="{{clienteorigen.cedula}}-{{clienteorigen.nombre}}-{{clienteorigen.apellidos}}-{{clienteorigen.ciudad}}">{{clienteorigen.cedula}}-{{clienteorigen.nombre}}-{{clienteorigen.apellidos}}-{{clienteorigen.ciudad}}</option>
             
-            </select>       
-          
+            </select>  
           </div>
                   
           <div class="input-field col s6">
-            <select class="browser-default" formControlName="origen" >
+            <select class="browser-default" formControlName="destino" >
               <option value="" disabled selected>Seleccione clienteorigen destino</option>
-              <option *ngFor="let clientedestino of listadoClientes" value="{{clientedestino.nombre}} - {{clientedestino.apellidos}}">{{clientedestino.nombre}} - {{clientedestino.apellidos}}</option>
+              <option *ngFor="let clientedestino of listadoClientes" value="{{clientedestino.cedula}} - {{clientedestino.nombre}} -{{clientedestino.apellidos}}- {{clientedestino.ciudad}}">{{clientedestino.cedula}} {{clientedestino.nombre}} {{clientedestino.apellidos}} {{clientedestino.ciudad}}</option>
             </select>
           </div>
       
@@ -36,9 +35,9 @@
                 <input type="time" formControlName="hora" class="validate">
             </div>
 
-            <div class="input-field col s6">        
+            <div class="input-field col s6">  
                
-                <select class="browser-default" formControlName="origen">
+                <select class="browser-default" formControlName="encomienda">
                   <option value="" disabled selected>Encomienda registrada</option>
                   <option *ngFor="let c of listadoEncomienda" value="{{c.descripcion}}">{{c.descripcion}}</option>
                 </select>  
@@ -51,37 +50,15 @@
             </div>
   
           <div class="input-field col s12">                
-            <button [disabled]="!fgValidacion.valid" class="btn waves-effect waves-light" type="submit" name="action">Enviar
+            <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
               <i class="material-icons right">send</i></button>
+        </div>
            
         </div>
-  
-  
-           
-        </div>
-  
-       
-      
-  
-  
-  
        </form>
   
    </div>
   
   </div>
 
-  <script>
-
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('select');
-        var instances = M.FormSelect.init(elems);
-      });
-    
-      // Or with jQuery
-    
-      $(document).ready(function(){
-        $('select').formSelect();
-      });
-    
-    </script>
+  

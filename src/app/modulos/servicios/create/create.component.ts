@@ -17,7 +17,7 @@ import Swal from 'sweetalert2';
 })
 export class CreateComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private clienteService: ClienteService,private encomiendaService: EncomiendaService, 
+  constructor(private fb: FormBuilder, private clienteService: ClienteService, private encomiendaService: EncomiendaService, 
     private servicioService: ServicioService, private router: Router, 
     ) { }
 
@@ -53,14 +53,6 @@ export class CreateComponent implements OnInit {
       alert("Error en el envio");
     })
   }
- 
-
-
-
-  ngOnInit(): void {
-    this.getAllClientes()
-    this.getAllEncomienda()
-  }
 
   
   getAllClientes(){
@@ -73,14 +65,18 @@ export class CreateComponent implements OnInit {
 
   getAllEncomienda(){
     this.encomiendaService.getAll().subscribe((data: EncomiendaModelo[]) => {
-      this.listadoClientes = data
+      this.listadoEncomienda = data
       console.log(data)
     })
   }
+ 
 
 
 
-  
+  ngOnInit(): void {
+    this.getAllClientes()
+    this.getAllEncomienda()
+  }
 
 
 }

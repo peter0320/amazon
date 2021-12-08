@@ -66,6 +66,15 @@ export class ServicioService {
     }
 
 
+    getWithId(id: string): Observable<ServicioModelo>{
+      return this.http.get<ServicioModelo>(`${this.url}/servicios/${id}`,{
+        headers: new HttpHeaders({
+          "Authorization": `Bearer ${this.token}`
+        })
+      })
+    }
+
+
 
 
 
