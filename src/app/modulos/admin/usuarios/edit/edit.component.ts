@@ -23,7 +23,7 @@ export class EditComponent implements OnInit {
       nombre: ['', [Validators.required]],
       apellidos: ['', [Validators.required]],
       telefono: ['', [Validators.required]],
-      correo: ['', [Validators.required, Validators.email]],
+      correo: [{value :'',disabled: true}, [Validators.required, Validators.email]],
     });
  
     id: string=''

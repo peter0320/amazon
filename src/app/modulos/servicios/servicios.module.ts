@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ServiciosRoutingModule } from './servicios-routing.module';
 import { CreateComponent } from './create/create.component';
@@ -15,7 +16,9 @@ import { GetComponent } from './get/get.component';
   ],
   imports: [
     CommonModule,
-    ServiciosRoutingModule
+    ServiciosRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ServiciosModule { }

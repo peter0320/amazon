@@ -22,9 +22,9 @@ export class EncomiendaService {
    store(encomienda: EncomiendaModelo): Observable<EncomiendaModelo> {
     return this.http.post<EncomiendaModelo>(`${this.url}/`, {
       descripcion: encomienda.descripcion,
-      apellidos: encomienda.peso,
-      telefono: encomienda.tipo,
-      correo: encomienda.presentacion
+      peso: encomienda.peso,
+      tipo: encomienda.tipo,
+      presentacion: encomienda.presentacion
     });
   }
 
@@ -40,9 +40,9 @@ export class EncomiendaService {
     update(encomienda: EncomiendaModelo): Observable<EncomiendaModelo> {
       return this.http.patch<EncomiendaModelo>(`${this.url}//${encomienda.id}`, {
         descripcion: encomienda.descripcion,
-        apellidos: encomienda.peso,
-        telefono: encomienda.tipo,
-        correo: encomienda.presentacion
+        peso: encomienda.peso,
+        tipo: encomienda.tipo,
+        presentacion: encomienda.presentacion
       }, {
         headers: new HttpHeaders({
           "Authorization": `Bearer ${this.token}`

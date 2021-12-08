@@ -1,1 +1,58 @@
-<p>edit works!</p>
+<div class="section container">
+
+    <h5 class="center-align">Registro de Encomiendas</h5>
+
+   <div class="row">
+       
+       <form class="col s12" [formGroup]="fgValidacion"  (ngSubmit)="edit()" >
+  
+        <div class="row card-panel">
+  
+            <div class="input-field col s6">  
+
+              
+                    <label for="descripcion" class="active">Descripcion</label>                
+                    <input formControlName="descripcion" type="text" class="validate">
+                                     
+                  </div>    
+                  
+                  <div class="input-field col s6">
+                    <label for="peso" class="active">peso</label>   
+                    <input type="text"  formControlName="peso" class="validate">
+                </div>
+      
+                
+                  <div class="input-field col s6">
+                    <label for="tipo" class="active">tipo</label> 
+                    <input type="text"  formControlName="tipo" class="validate">
+                </div>
+            
+           
+            
+            <div class="input-field col s6">
+                <label for="presentacion" class="active">presentacion</label> 
+                <input type="text" formControlName="presentacion" class="validate">
+            </div>
+  
+          <div class="input-field col s12">
+                
+            <button [disabled]="!fgValidacion.valid" class="btn waves-effect waves-light" type="submit" name="action">Enviar
+              <i class="material-icons right">send</i></button>
+      
+        </div>
+  
+  
+           
+        </div>
+  
+       
+      
+  
+  
+  
+       </form>
+  
+   </div>
+  
+  </div>
+

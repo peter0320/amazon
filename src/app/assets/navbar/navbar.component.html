@@ -2,18 +2,17 @@
 <div class="navbar-fixed">
 
 <nav>
-    <div class="nav-wrapper   indigo darken-4">      
+    <div class="nav-wrapper   indigo darken-4">  
+       <!-- Logo sistema  -->    
       <img src="assets/images/logo2.png" class="img-responsive"  width="200" alt="image">      
-      <ul id="nav-mobile dropdown1" class="right hide-on-med-and-down">
-        <li *ngIf="activeSession"><a routerLink="/admin/get">Usuarios</a></li>
-        
-        
-        
-        <li *ngIf="activeSession"><a routerLink="/clientes/get">Clientes</a>
-        <li *ngIf="activeSession"><a routerLink="/servicios/get">Servicios</a></li>
-        <li *ngIf="activeSession"><a routerLink="/encomiendas/get">Encomiendas</a></li>
-        
-        <!-- Sesion -->
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+      <!-- Menu sistema -->
+      <li *ngIf="activeSession"><a routerLink="/admin/get">Usuarios</a></li>
+      <li *ngIf="activeSession"><a routerLink="/clientes/get">Clientes</a>        
+      <li *ngIf="activeSession"><a routerLink="/encomiendas/get">Encomiendas</a></li>
+      <li *ngIf="activeSession"><a routerLink="/servicios/get">Servicios</a></li>        
+      <!-- Sesion -->
       <li *ngIf="!activeSession"><a routerLink="/seguridad/login">Login</a></li>
       <li *ngIf="!activeSession"><a routerLink="/admin/create">Registrarse</a></li>
       <li *ngIf="activeSession"><a routerLink="/seguridad/logout">Cerrar Sesion</a></li>
