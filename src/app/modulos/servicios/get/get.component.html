@@ -1,13 +1,14 @@
 <div class="container">
 
-    <h4 text-align="center">Servicios registrados</h4>
+    <h4 text-align="center" >Servicios registrados</h4>
     <br>
   
-    <a routerLink="/servicios/create" class="btn">Registrar Servicio</a>
+    <a routerLink="/servicios/create" class="btn btn green darken-4">Registrar Servicio</a>
 
-  
-    <table class="table responsive">
-      <thead>
+    <br>
+    <br>
+    <table class="table responsive ">
+      <thead class="grey lighten-4">
         <tr>
             <th>Origen</th>
             <th>Destino</th>
@@ -29,8 +30,8 @@
           <td>{{p.valor}}</td>
           
           <td>
-            <a routerLink="/servicios/edit/{{p.id}}" class="btn">Editar</a>
-            <button class="btn red" (click)="delete(p.id)">Eliminar</button>
+            <a routerLink="/servicios/edit/{{p.id}}" class="btn yellow accent-3"><i class="material-icons">edit</i></a>
+            <button class="btn red accent-4" (click)="delete(p.id)"><i class="material-icons">delete</i></button>
           </td>
         </tr>
       </tbody>

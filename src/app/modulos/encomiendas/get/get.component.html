@@ -3,11 +3,11 @@
     <h4 class="center-align">Encomienda Registradas</h4>
     <br>
   
-    <a routerLink="/encomiendas/create" class="btn">Registrar Encomiendas</a>
+    <a routerLink="/encomiendas/create" class="btn green darken-4">Registrar Encomiendas</a>
     <br><br><br>
   
     <table class="table responsive">
-      <thead>
+      <thead class="grey lighten-4">
         <tr>
             <th>Descripcion</th>
             <th>Peso</th>
@@ -24,8 +24,8 @@
           <td>{{p.tipo}}</td>
           <td>{{p.presentacion}}</td>
           <td>
-            <a routerLink="/encomiendas/edit/{{p.id}}" class="btn">Editar</a>
-            <button class="btn red" (click)="delete(p.id)">Eliminar</button>
+            <a routerLink="/encomiendas/edit/{{p.id}}" class="btn yellow accent-3"><i class="material-icons">edit</i></a>
+            <button class="btn red accent-4" (click)="delete(p.id)"><i class="material-icons">delete</i></button>
           </td>
         </tr>
       </tbody>

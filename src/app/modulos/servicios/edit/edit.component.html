@@ -3,6 +3,7 @@
     <h5 class="center-align">Registro Servicios</h5>
    <div class="row">
     <form class="col s12" [formGroup]="fgValidacion"  (ngSubmit)="edit()" >
+        <input formControlName="id" type="hidden" class="validate">
   
         <div class="row card-panel">
   
@@ -10,7 +11,7 @@
           <div class="input-field col s6">
             <label for="origen" class="active">Cliente Origen</label> 
             <select class="browser-default" formControlName="origen">
-              <option value="" disabled selected>Seleccione Cliente Origen</option>
+              <option value="" disabled selected>Cliente Origen</option>
               <option *ngFor="let clienteorigen of listadoClientes" value="{{clienteorigen.cedula}}-{{clienteorigen.nombre}}-{{clienteorigen.apellidos}}-{{clienteorigen.ciudad}}">{{clienteorigen.cedula}}-{{clienteorigen.nombre}}-{{clienteorigen.apellidos}}-{{clienteorigen.ciudad}}</option>
             
             </select>  
@@ -19,7 +20,7 @@
           <div class="input-field col s6">
             <label for="destino" class="active">Cliente Destino</label>  
             <select class="browser-default" formControlName="destino" >
-              <option value="" disabled selected>Seleccione clienteorigen destino</option>
+              <option value="" disabled selected>cliente destino</option>
               <option *ngFor="let clientedestino of listadoClientes" value="{{clientedestino.cedula}} - {{clientedestino.nombre}} -{{clientedestino.apellidos}}- {{clientedestino.ciudad}}">{{clientedestino.cedula}} {{clientedestino.nombre}} {{clientedestino.apellidos}} {{clientedestino.ciudad}}</option>
             </select>
           </div>

@@ -1,13 +1,13 @@
 <div class="container">
 
-    <h4 text-align="center">Tabla de usuarios registrados</h4>
-    <br>
+    <h4 class="center-align">Tabla de usuarios registrados</h4>
+   
   
-    <a routerLink="/admin/create" class="btn">Registrar usuario</a>
+    <a routerLink="/admin/create" class="btn green darken-4">Registrar usuario</a>
 
-  
+    <br><br>
     <table class="table responsive">
-      <thead>
+      <thead class="grey lighten-4">
         <tr>
             <th>Nombre</th>
             <th>Apellidos</th>
@@ -24,8 +24,8 @@
           <td>{{p.correo}}</td>
           <td>{{p.telefono}}</td>
           <td>
-            <a routerLink="/admin/edit/{{p.id}}" class="btn">Editar</a>
-            <button class="btn red" (click)="delete(p.id)">Eliminar</button>
+            <a routerLink="/admin/edit/{{p.id}}" class="btn yellow accent-3"><i class="material-icons">edit</i></a>
+            <button class="btn  red accent-4" (click)="delete(p.id)"><i class="material-icons">delete</i></button>
           </td>
         </tr>
       </tbody>
