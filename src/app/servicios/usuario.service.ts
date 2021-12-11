@@ -15,7 +15,7 @@ export class UsuarioService {
      }
 
 
-      url = "http://localhost:3000"
+      url = "https://apiloopbackgrupo27equipo2.herokuapp.com"
       token: string = ''
 
 
