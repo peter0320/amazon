@@ -1,0 +1,37 @@
+footer {
+  background: #300606; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #000000,
+    #2b0707
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #000000,
+    #500202
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.nav-wrapper {
+  background: #300606; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #000000,
+    #470303
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #000000,
+    #500202
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+nav ul :hover {
+  background-color: yellow;
+} /* CSS link hover (green) */
+
+.titulo_index {
+  line-height: 1.2;
+  font-size: 3em;
+  font-weight: bold;
+  color: rgb(12, 9, 9);
+}

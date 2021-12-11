@@ -7,8 +7,8 @@
 
     <br>
     <br>
-    <table class="table responsive ">
-      <thead class="grey lighten-4">
+    <table class="table responsive  hoverable highlight">
+      <thead class="grey lighten-4 ">
         <tr>
             <th>Origen</th>
             <th>Destino</th>
@@ -22,7 +22,7 @@
    
       <tbody>
         <tr *ngFor="let p of listado">
-          <td>{{p.origen}}</td>
+          <td >{{p.origen}}</td>
           <td>{{p.destino}}</td>
           <td>{{p.fecha}}</td>
           <td>{{p.hora}}</td>
@@ -36,6 +36,7 @@
         </tr>
       </tbody>
     </table>
+    <br>
     </div>
 
    
